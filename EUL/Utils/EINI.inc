@@ -33,10 +33,7 @@ bool:IsFileInQueue(File:file_name[])
 	new file_name_str[MAX_FILE_ADDR_SIZE];
 	strcat(file_name_str, file_name);
 	
-	for(new i = 0; i <= MAX_FILES; i++)
-	{
-		if(strcmp(file_name_str, queued_files[i], false) == 0) return true;
-	}
+	for(new i = 0; i <= MAX_FILES; i++) {if(strcmp(file_name_str, queued_files[i], false) == 0) return true;}
 	return false;
 }
 
@@ -87,7 +84,8 @@ stock BuildFile(File:file_name[])
 		{
 		    if(!IsLineWithinAddrSpace(handleid, current_line)) printf("EINI Error<%s>: File-space exceeded.", file_name);
 		    CloseFile(file_handle);
-			return;
+		    
+		    return;
 		}
 
 	    fseek(file_handle, index);
@@ -185,26 +183,3 @@ stock CloseFile(File:file, handleid)
 	for(new i = info_addr; i <= info_addr_max; i++) strcat(file_info[i], "");
 	fclose(file);
 }
-	
-	
-	
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	
