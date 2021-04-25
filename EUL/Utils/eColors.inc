@@ -54,7 +54,7 @@ else
 	#define COLOR_BISQUE 0xFFE4C4AA
 #endif
 #if !defined COLOR_BLACK
-	#define COLOR_BLACK 0x000000AA
+	#define COLOR_BLACK 0x000000FF
 #endif
 #if !defined COLOR_CHARTREUSE
 	#define COLOR_CHARTREUSE 0x7FFF00AA
